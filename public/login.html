@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background: url('login1.jpg');
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-container {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        #login-img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #login-btn {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #login-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        
+        <label for="secret-code">Enter Secret Code:</label>
+        <input type="text" id="secret-code" placeholder="Enter code...">
+        <br>
+        <button id="login-btn" onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            var secretCode = document.getElementById('secret-code').value;
+
+            if (secretCode === '9623922598') {
+                window.location.href = 'admin.html';
+            } else {
+                alert("I'm sorry, you're not admin.");
+            }
+        }
+    </script>
+</body>
+</html>
